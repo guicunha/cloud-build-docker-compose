@@ -1,7 +1,6 @@
- 
-FROM ubuntu:bionic
+ FROM ubuntu:bionic
 
-ARG version=1.24.0
+ARG DOCKER_COMPOSE_VERSION
 
 # https://docs.docker.com/compose/install/
 RUN \
@@ -12,4 +11,3 @@ RUN \
    chmod +x /usr/local/bin/docker-compose
 
 ENTRYPOINT ["/usr/local/bin/docker-compose"]
-
